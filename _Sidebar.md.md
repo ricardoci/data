@@ -1,8 +1,7 @@
 ## @blockfrost/blockfrost-js
 
 - [Home](../wiki/Home)
-- [Exports](../wiki/Exports)
 
-### Classes
+### Methods
 
-- [BlockFrostAPI](../wiki/Class-BlockFrostAPI)
+- [API Method](../wiki/Class-BlockFrostAPI)
