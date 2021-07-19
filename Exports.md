@@ -1,14 +1,28 @@
+# @blockfrost/blockfrost-js
+
 ## Table of contents
 
 ### Classes
 
-- [BlockFrostAPI](../wiki/Class-BlockFrostAPI)
+- [BlockFrostAPI](../wiki/BlockFrostAPI)
+- [BlockFrostIPFS](../wiki/BlockFrostIPFS)
 
 ### Type aliases
 
+- [Error](../wiki/Exports#error)
 - [Responses](../wiki/Exports#responses)
 
 ## Type aliases
+
+### Error
+
+Ƭ **Error**: `ErrorType`
+
+#### Defined in
+
+[index.ts:11](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/index.ts#L11)
+
+___
 
 ### Responses
 
@@ -16,4 +30,4 @@
 
 #### Defined in
 
-[index.ts:701](https://github.com/blockfrost/blockfrost-js/blob/74c5e4a/src/index.ts#L701)
+[index.ts:10](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/index.ts#L10)
