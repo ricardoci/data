@@ -1,26 +1,3 @@
-# Class: BlockFrostIPFS
-
-## Table of contents
-
-### Constructors
-
-- [constructor](../wiki/BlockFrostIPFS#constructor)
-
-### Properties
-
-- [add](../wiki/BlockFrostIPFS#add)
-- [apiUrl](../wiki/BlockFrostIPFS#apiurl)
-- [axiosInstance](../wiki/BlockFrostIPFS#axiosinstance)
-- [gateway](../wiki/BlockFrostIPFS#gateway)
-- [list](../wiki/BlockFrostIPFS#list)
-- [listByPath](../wiki/BlockFrostIPFS#listbypath)
-- [options](../wiki/BlockFrostIPFS#options)
-- [pin](../wiki/BlockFrostIPFS#pin)
-- [pinRemove](../wiki/BlockFrostIPFS#pinremove)
-- [projectId](../wiki/BlockFrostIPFS#projectid)
-- [userAgent](../wiki/BlockFrostIPFS#useragent)
-
-## Constructors
 
 ### constructor
 
@@ -34,17 +11,17 @@
 
 #### Defined in
 
-[BlockFrostIPFS.ts:25](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostIPFS.ts#L25)
+[src/BlockFrostIPFS.ts:25](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostIPFS.ts#L25)
 
 ## Properties
 
 ### add
 
-• **add**: (`readStream`: `ReadStream`) => `Promise`<`AddResponse`\>
+• **add**: (`path`: `string`) => `Promise`<`AddResponse`\>
 
 #### Type declaration
 
-▸ (`readStream`): `Promise`<`AddResponse`\>
+▸ (`path`): `Promise`<`AddResponse`\>
 
 add - Add a file or directory to ipfs
 
@@ -52,7 +29,7 @@ add - Add a file or directory to ipfs
 
 | Name | Type |
 | :------ | :------ |
-| `readStream` | `ReadStream` |
+| `path` | `string` |
 
 ##### Returns
 
@@ -62,7 +39,7 @@ information about added ipfs object
 
 #### Defined in
 
-[BlockFrostIPFS.ts:45](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostIPFS.ts#L45)
+[src/BlockFrostIPFS.ts:45](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostIPFS.ts#L45)
 
 ___
 
@@ -72,7 +49,7 @@ ___
 
 #### Defined in
 
-[BlockFrostIPFS.ts:19](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostIPFS.ts#L19)
+[src/BlockFrostIPFS.ts:19](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostIPFS.ts#L19)
 
 ___
 
@@ -82,7 +59,7 @@ ___
 
 #### Defined in
 
-[BlockFrostIPFS.ts:23](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostIPFS.ts#L23)
+[src/BlockFrostIPFS.ts:23](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostIPFS.ts#L23)
 
 ___
 
@@ -110,7 +87,7 @@ the object content
 
 #### Defined in
 
-[BlockFrostIPFS.ts:53](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostIPFS.ts#L53)
+[src/BlockFrostIPFS.ts:53](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostIPFS.ts#L53)
 
 ___
 
@@ -138,7 +115,7 @@ list of pinned objects
 
 #### Defined in
 
-[BlockFrostIPFS.ts:77](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostIPFS.ts#L77)
+[src/BlockFrostIPFS.ts:77](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostIPFS.ts#L77)
 
 ___
 
@@ -166,7 +143,7 @@ list of pinned objects
 
 #### Defined in
 
-[BlockFrostIPFS.ts:69](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostIPFS.ts#L69)
+[src/BlockFrostIPFS.ts:69](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostIPFS.ts#L69)
 
 ___
 
@@ -176,7 +153,7 @@ ___
 
 #### Defined in
 
-[BlockFrostIPFS.ts:22](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostIPFS.ts#L22)
+[src/BlockFrostIPFS.ts:22](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostIPFS.ts#L22)
 
 ___
 
@@ -204,7 +181,7 @@ pinned object
 
 #### Defined in
 
-[BlockFrostIPFS.ts:61](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostIPFS.ts#L61)
+[src/BlockFrostIPFS.ts:61](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostIPFS.ts#L61)
 
 ___
 
@@ -232,7 +209,7 @@ removed pinned object
 
 #### Defined in
 
-[BlockFrostIPFS.ts:85](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostIPFS.ts#L85)
+[src/BlockFrostIPFS.ts:85](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostIPFS.ts#L85)
 
 ___
 
@@ -242,7 +219,7 @@ ___
 
 #### Defined in
 
-[BlockFrostIPFS.ts:20](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostIPFS.ts#L20)
+[src/BlockFrostIPFS.ts:20](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostIPFS.ts#L20)
 
 ___
 
@@ -252,4 +229,4 @@ ___
 
 #### Defined in
 
-[BlockFrostIPFS.ts:21](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostIPFS.ts#L21)
+[src/BlockFrostIPFS.ts:21](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostIPFS.ts#L21)
