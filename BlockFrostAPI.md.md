@@ -11,6 +11,8 @@
 - [accounts](../wiki/BlockFrostAPI#accounts)
 - [accountsAddresses](../wiki/BlockFrostAPI#accountsaddresses)
 - [accountsAddressesAll](../wiki/BlockFrostAPI#accountsaddressesall)
+- [accountsAddressesAssets](../wiki/BlockFrostAPI#accountsaddressesassets)
+- [accountsAddressesAssetsAll](../wiki/BlockFrostAPI#accountsaddressesassetsall)
 - [accountsDelegations](../wiki/BlockFrostAPI#accountsdelegations)
 - [accountsDelegationsAll](../wiki/BlockFrostAPI#accountsdelegationsall)
 - [accountsHistory](../wiki/BlockFrostAPI#accountshistory)
@@ -27,8 +29,6 @@
 - [addressesTotal](../wiki/BlockFrostAPI#addressestotal)
 - [addressesTransactions](../wiki/BlockFrostAPI#addressestransactions)
 - [addressesTransactionsAll](../wiki/BlockFrostAPI#addressestransactionsall)
-- [addressesTxs](../wiki/BlockFrostAPI#addressestxs)
-- [addressesTxsAll](../wiki/BlockFrostAPI#addressestxsall)
 - [addressesUtxos](../wiki/BlockFrostAPI#addressesutxos)
 - [addressesUtxosAll](../wiki/BlockFrostAPI#addressesutxosall)
 - [apiUrl](../wiki/BlockFrostAPI#apiurl)
@@ -40,14 +40,16 @@
 - [assetsPolicyById](../wiki/BlockFrostAPI#assetspolicybyid)
 - [assetsPolicyByIdAll](../wiki/BlockFrostAPI#assetspolicybyidall)
 - [assetsTransactions](../wiki/BlockFrostAPI#assetstransactions)
-- [assetsTxs](../wiki/BlockFrostAPI#assetstxs)
 - [axiosInstance](../wiki/BlockFrostAPI#axiosinstance)
 - [blocks](../wiki/BlockFrostAPI#blocks)
 - [blocksLatest](../wiki/BlockFrostAPI#blockslatest)
+- [blocksLatestTxs](../wiki/BlockFrostAPI#blockslatesttxs)
+- [blocksLatestTxsAll](../wiki/BlockFrostAPI#blockslatesttxsall)
 - [blocksNext](../wiki/BlockFrostAPI#blocksnext)
 - [blocksPrevious](../wiki/BlockFrostAPI#blocksprevious)
 - [blocksTxs](../wiki/BlockFrostAPI#blockstxs)
 - [blocksTxsAll](../wiki/BlockFrostAPI#blockstxsall)
+- [deriveAddress](../wiki/BlockFrostAPI#deriveaddress)
 - [epochs](../wiki/BlockFrostAPI#epochs)
 - [epochsBlocks](../wiki/BlockFrostAPI#epochsblocks)
 - [epochsBlocksByPoolId](../wiki/BlockFrostAPI#epochsblocksbypoolid)
@@ -58,6 +60,7 @@
 - [epochsStakes](../wiki/BlockFrostAPI#epochsstakes)
 - [epochsStakesByPoolId](../wiki/BlockFrostAPI#epochsstakesbypoolid)
 - [genesis](../wiki/BlockFrostAPI#genesis)
+- [getAccount](../wiki/BlockFrostAPI#getaccount)
 - [health](../wiki/BlockFrostAPI#health)
 - [healthClock](../wiki/BlockFrostAPI#healthclock)
 - [metadataTxsLabel](../wiki/BlockFrostAPI#metadatatxslabel)
@@ -65,6 +68,7 @@
 - [metadataTxsLabels](../wiki/BlockFrostAPI#metadatatxslabels)
 - [metrics](../wiki/BlockFrostAPI#metrics)
 - [metricsEndpoints](../wiki/BlockFrostAPI#metricsendpoints)
+- [network](../wiki/BlockFrostAPI#network)
 - [nutlinkAddress](../wiki/BlockFrostAPI#nutlinkaddress)
 - [nutlinkAddressTicker](../wiki/BlockFrostAPI#nutlinkaddressticker)
 - [nutlinkAddressTickerAll](../wiki/BlockFrostAPI#nutlinkaddresstickerall)
@@ -85,6 +89,12 @@
 - [poolsRetiring](../wiki/BlockFrostAPI#poolsretiring)
 - [projectId](../wiki/BlockFrostAPI#projectid)
 - [root](../wiki/BlockFrostAPI#root)
+- [script](../wiki/BlockFrostAPI#script)
+- [scriptCbor](../wiki/BlockFrostAPI#scriptcbor)
+- [scriptDatum](../wiki/BlockFrostAPI#scriptdatum)
+- [scriptJson](../wiki/BlockFrostAPI#scriptjson)
+- [scriptRedeemers](../wiki/BlockFrostAPI#scriptredeemers)
+- [scripts](../wiki/BlockFrostAPI#scripts)
 - [txSubmit](../wiki/BlockFrostAPI#txsubmit)
 - [txs](../wiki/BlockFrostAPI#txs)
 - [txsDelegations](../wiki/BlockFrostAPI#txsdelegations)
@@ -93,6 +103,7 @@
 - [txsMirs](../wiki/BlockFrostAPI#txsmirs)
 - [txsPoolRetires](../wiki/BlockFrostAPI#txspoolretires)
 - [txsPoolUpdates](../wiki/BlockFrostAPI#txspoolupdates)
+- [txsRedeemers](../wiki/BlockFrostAPI#txsredeemers)
 - [txsStakes](../wiki/BlockFrostAPI#txsstakes)
 - [txsUtxos](../wiki/BlockFrostAPI#txsutxos)
 - [txsWithdrawals](../wiki/BlockFrostAPI#txswithdrawals)
@@ -112,7 +123,7 @@
 
 #### Defined in
 
-[BlockFrostAPI.ts:126](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L126)
+[src/BlockFrostAPI.ts:140](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L140)
 
 ## Properties
 
@@ -140,7 +151,7 @@ Information about a specific stake account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:153](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L153)
+[src/BlockFrostAPI.ts:167](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L167)
 
 ___
 
@@ -169,17 +180,17 @@ Information about the addresses of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:270](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L270)
+[src/BlockFrostAPI.ts:284](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L284)
 
 ___
 
 ### accountsAddressesAll
 
-• **accountsAddressesAll**: (`stakeAddress`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"account_addresses_content"``]\>
+• **accountsAddressesAll**: (`stakeAddress`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"account_addresses_content"``]\>
 
 #### Type declaration
 
-▸ (`stakeAddress`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"account_addresses_content"``]\>
+▸ (`stakeAddress`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"account_addresses_content"``]\>
 
 accountsAddressesAll - Obtain information about all addresses of a specific account.
 
@@ -188,8 +199,7 @@ accountsAddressesAll - Obtain information about all addresses of a specific acco
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `stakeAddress` | `string` | Bech32 stake address |
-| `order` | ``"asc"`` \| ``"desc"`` | - |
-| `batchSize` | `number` | - |
+| `allMethodOptions?` | `AllMethodOptions` | - |
 
 ##### Returns
 
@@ -199,7 +209,65 @@ Information about the addresses of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:279](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L279)
+[src/BlockFrostAPI.ts:293](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L293)
+
+___
+
+### accountsAddressesAssets
+
+• **accountsAddressesAssets**: (`stakeAddress`: `string`, `pagination?`: `PaginationOptions`) => `Promise`<`components`[``"schemas"``][``"account_addresses_assets"``]\>
+
+#### Type declaration
+
+▸ (`stakeAddress`, `pagination?`): `Promise`<`components`[``"schemas"``][``"account_addresses_assets"``]\>
+
+accountsAddressesAssets - Obtain information about assets associated with addresses of a specific account.
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `stakeAddress` | `string` | Bech32 stake address |
+| `pagination?` | `PaginationOptions` | - |
+
+##### Returns
+
+`Promise`<`components`[``"schemas"``][``"account_addresses_assets"``]\>
+
+Assets associated with the account addresses
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:302](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L302)
+
+___
+
+### accountsAddressesAssetsAll
+
+• **accountsAddressesAssetsAll**: (`stakeAddress`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"account_addresses_assets"``]\>
+
+#### Type declaration
+
+▸ (`stakeAddress`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"account_addresses_assets"``]\>
+
+accountsAddressesAssets - Obtain information about assets associated with addresses of a specific account.
+
+##### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `stakeAddress` | `string` | Bech32 stake address |
+| `allMethodOptions?` | `AllMethodOptions` | - |
+
+##### Returns
+
+`Promise`<`components`[``"schemas"``][``"account_addresses_assets"``]\>
+
+Assets associated with the account addresses
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:311](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L311)
 
 ___
 
@@ -228,17 +296,17 @@ Information about the delegation of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:162](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L162)
+[src/BlockFrostAPI.ts:176](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L176)
 
 ___
 
 ### accountsDelegationsAll
 
-• **accountsDelegationsAll**: (`stakeAddress`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"account_delegation_content"``]\>
+• **accountsDelegationsAll**: (`stakeAddress`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"account_delegation_content"``]\>
 
 #### Type declaration
 
-▸ (`stakeAddress`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"account_delegation_content"``]\>
+▸ (`stakeAddress`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"account_delegation_content"``]\>
 
 accountsDelegationsAll - Obtain information about all delegations of a specific account.
 
@@ -247,8 +315,7 @@ accountsDelegationsAll - Obtain information about all delegations of a specific 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `stakeAddress` | `string` | Bech32 stake address |
-| `order` | ``"asc"`` \| ``"desc"`` | - |
-| `batchSize` | `number` | - |
+| `allMethodOptions?` | `AllMethodOptions` | - |
 
 ##### Returns
 
@@ -258,7 +325,7 @@ Information about the delegation of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:171](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L171)
+[src/BlockFrostAPI.ts:185](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L185)
 
 ___
 
@@ -287,17 +354,17 @@ Information about the history of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:216](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L216)
+[src/BlockFrostAPI.ts:230](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L230)
 
 ___
 
 ### accountsHistoryAll
 
-• **accountsHistoryAll**: (`stakeAddress`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"account_history_content"``]\>
+• **accountsHistoryAll**: (`stakeAddress`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"account_history_content"``]\>
 
 #### Type declaration
 
-▸ (`stakeAddress`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"account_history_content"``]\>
+▸ (`stakeAddress`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"account_history_content"``]\>
 
 accountsHistoryAll - Obtain information about whole history of a specific account.
 
@@ -306,8 +373,7 @@ accountsHistoryAll - Obtain information about whole history of a specific accoun
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `stakeAddress` | `string` | Bech32 stake address |
-| `order` | ``"asc"`` \| ``"desc"`` | - |
-| `batchSize` | `number` | - |
+| `allMethodOptions?` | `AllMethodOptions` | - |
 
 ##### Returns
 
@@ -317,7 +383,7 @@ Information about the history of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:225](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L225)
+[src/BlockFrostAPI.ts:239](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L239)
 
 ___
 
@@ -346,17 +412,17 @@ Information about the MIRs of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:252](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L252)
+[src/BlockFrostAPI.ts:266](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L266)
 
 ___
 
 ### accountsMirsAll
 
-• **accountsMirsAll**: (`stakeAddress`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"account_mir_content"``]\>
+• **accountsMirsAll**: (`stakeAddress`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"account_mir_content"``]\>
 
 #### Type declaration
 
-▸ (`stakeAddress`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"account_mir_content"``]\>
+▸ (`stakeAddress`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"account_mir_content"``]\>
 
 accountsMirsAll - Obtain information about all MIRs of a specific account.
 
@@ -365,8 +431,7 @@ accountsMirsAll - Obtain information about all MIRs of a specific account.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `stakeAddress` | `string` | Bech32 stake address |
-| `order` | ``"asc"`` \| ``"desc"`` | - |
-| `batchSize` | `number` | - |
+| `allMethodOptions?` | `AllMethodOptions` | - |
 
 ##### Returns
 
@@ -376,7 +441,7 @@ Information about the MIRs of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:261](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L261)
+[src/BlockFrostAPI.ts:275](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L275)
 
 ___
 
@@ -405,17 +470,17 @@ Information about the registrations and deregistrations of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:180](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L180)
+[src/BlockFrostAPI.ts:194](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L194)
 
 ___
 
 ### accountsRegistrationsAll
 
-• **accountsRegistrationsAll**: (`stakeAddress`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"account_registration_content"``]\>
+• **accountsRegistrationsAll**: (`stakeAddress`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"account_registration_content"``]\>
 
 #### Type declaration
 
-▸ (`stakeAddress`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"account_registration_content"``]\>
+▸ (`stakeAddress`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"account_registration_content"``]\>
 
 accountsRegistrationsAll - Obtain information about all registrations and deregistrations of a specific account.
 
@@ -424,8 +489,7 @@ accountsRegistrationsAll - Obtain information about all registrations and deregi
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `stakeAddress` | `string` | Bech32 stake address |
-| `order` | ``"asc"`` \| ``"desc"`` | - |
-| `batchSize` | `number` | - |
+| `allMethodOptions?` | `AllMethodOptions` | - |
 
 ##### Returns
 
@@ -435,7 +499,7 @@ Information about the registrations and deregistrations of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:189](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L189)
+[src/BlockFrostAPI.ts:203](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L203)
 
 ___
 
@@ -464,17 +528,17 @@ Information about the history of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:198](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L198)
+[src/BlockFrostAPI.ts:212](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L212)
 
 ___
 
 ### accountsRewardsAll
 
-• **accountsRewardsAll**: (`stakeAddress`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"account_reward_content"``]\>
+• **accountsRewardsAll**: (`stakeAddress`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"account_reward_content"``]\>
 
 #### Type declaration
 
-▸ (`stakeAddress`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"account_reward_content"``]\>
+▸ (`stakeAddress`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"account_reward_content"``]\>
 
 accountsRewardsAll - Obtain information about whole history of a specific account.
 
@@ -483,8 +547,7 @@ accountsRewardsAll - Obtain information about whole history of a specific accoun
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `stakeAddress` | `string` | Bech32 stake address |
-| `order` | ``"asc"`` \| ``"desc"`` | - |
-| `batchSize` | `number` | - |
+| `allMethodOptions?` | `AllMethodOptions` | - |
 
 ##### Returns
 
@@ -494,7 +557,7 @@ Information about the history of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:207](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L207)
+[src/BlockFrostAPI.ts:221](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L221)
 
 ___
 
@@ -523,17 +586,17 @@ Information about the withdrawals of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:234](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L234)
+[src/BlockFrostAPI.ts:248](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L248)
 
 ___
 
 ### accountsWithdrawalsAll
 
-• **accountsWithdrawalsAll**: (`stakeAddress`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"account_withdrawal_content"``]\>
+• **accountsWithdrawalsAll**: (`stakeAddress`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"account_withdrawal_content"``]\>
 
 #### Type declaration
 
-▸ (`stakeAddress`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"account_withdrawal_content"``]\>
+▸ (`stakeAddress`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"account_withdrawal_content"``]\>
 
 accountsWithdrawalsAll - Obtain information about all withdrawals of a specific account.
 
@@ -542,8 +605,7 @@ accountsWithdrawalsAll - Obtain information about all withdrawals of a specific 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `stakeAddress` | `string` | Bech32 stake address |
-| `order` | ``"asc"`` \| ``"desc"`` | - |
-| `batchSize` | `number` | - |
+| `allMethodOptions?` | `AllMethodOptions` | - |
 
 ##### Returns
 
@@ -553,7 +615,7 @@ Information about the withdrawals of a specific account.
 
 #### Defined in
 
-[BlockFrostAPI.ts:243](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L243)
+[src/BlockFrostAPI.ts:257](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L257)
 
 ___
 
@@ -581,7 +643,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:368](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L368)
+[src/BlockFrostAPI.ts:391](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L391)
 
 ___
 
@@ -609,7 +671,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:377](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L377)
+[src/BlockFrostAPI.ts:400](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L400)
 
 ___
 
@@ -639,17 +701,17 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:404](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L404)
+[src/BlockFrostAPI.ts:409](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L409)
 
 ___
 
 ### addressesTransactionsAll
 
-• **addressesTransactionsAll**: (`address`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"address_transactions_content"``]\>
+• **addressesTransactionsAll**: (`address`: `string`, `allMethodOptions?`: `AllMethodOptions`, `additionalOptions?`: `AdditionalEndpointOptions`) => `Promise`<`components`[``"schemas"``][``"address_transactions_content"``]\>
 
 #### Type declaration
 
-▸ (`address`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"address_transactions_content"``]\>
+▸ (`address`, `allMethodOptions?`, `additionalOptions?`): `Promise`<`components`[``"schemas"``][``"address_transactions_content"``]\>
 
 addressesTransactionsAll
 
@@ -658,8 +720,8 @@ addressesTransactionsAll
 | Name | Type |
 | :------ | :------ |
 | `address` | `string` |
-| `order` | ``"asc"`` \| ``"desc"`` |
-| `batchSize` | `number` |
+| `allMethodOptions?` | `AllMethodOptions` |
+| `additionalOptions?` | `AdditionalEndpointOptions` |
 
 ##### Returns
 
@@ -669,66 +731,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:413](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L413)
-
-___
-
-### addressesTxs
-
-• **addressesTxs**: (`address`: `string`, `pagination?`: `PaginationOptions`) => `Promise`<`components`[``"schemas"``][``"address_txs_content"``]\>
-
-#### Type declaration
-
-▸ (`address`, `pagination?`): `Promise`<`components`[``"schemas"``][``"address_txs_content"``]\>
-
-addressesTxs
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `pagination?` | `PaginationOptions` |
-
-##### Returns
-
-`Promise`<`components`[``"schemas"``][``"address_txs_content"``]\>
-
-xxx
-
-#### Defined in
-
-[BlockFrostAPI.ts:386](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L386)
-
-___
-
-### addressesTxsAll
-
-• **addressesTxsAll**: (`address`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"address_txs_content"``]\>
-
-#### Type declaration
-
-▸ (`address`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"address_txs_content"``]\>
-
-addressesTxsAll
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `order` | ``"asc"`` \| ``"desc"`` |
-| `batchSize` | `number` |
-
-##### Returns
-
-`Promise`<`components`[``"schemas"``][``"address_txs_content"``]\>
-
-xxx
-
-#### Defined in
-
-[BlockFrostAPI.ts:395](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L395)
+[src/BlockFrostAPI.ts:418](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L418)
 
 ___
 
@@ -757,17 +760,17 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:422](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L422)
+[src/BlockFrostAPI.ts:427](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L427)
 
 ___
 
 ### addressesUtxosAll
 
-• **addressesUtxosAll**: (`address`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"address_utxo_content"``]\>
+• **addressesUtxosAll**: (`address`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"address_utxo_content"``]\>
 
 #### Type declaration
 
-▸ (`address`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"address_utxo_content"``]\>
+▸ (`address`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"address_utxo_content"``]\>
 
 addressesUtxosAll
 
@@ -776,8 +779,7 @@ addressesUtxosAll
 | Name | Type |
 | :------ | :------ |
 | `address` | `string` |
-| `order` | ``"asc"`` \| ``"desc"`` |
-| `batchSize` | `number` |
+| `allMethodOptions?` | `AllMethodOptions` |
 
 ##### Returns
 
@@ -787,7 +789,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:431](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L431)
+[src/BlockFrostAPI.ts:436](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L436)
 
 ___
 
@@ -797,7 +799,7 @@ ___
 
 #### Defined in
 
-[BlockFrostAPI.ts:120](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L120)
+[src/BlockFrostAPI.ts:134](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L134)
 
 ___
 
@@ -825,7 +827,7 @@ List of assets.
 
 #### Defined in
 
-[BlockFrostAPI.ts:287](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L287)
+[src/BlockFrostAPI.ts:319](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L319)
 
 ___
 
@@ -854,7 +856,7 @@ List of a addresses containing a specific asset.
 
 #### Defined in
 
-[BlockFrostAPI.ts:341](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L341)
+[src/BlockFrostAPI.ts:364](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L364)
 
 ___
 
@@ -882,7 +884,7 @@ Information about a specific asset.
 
 #### Defined in
 
-[BlockFrostAPI.ts:296](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L296)
+[src/BlockFrostAPI.ts:328](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L328)
 
 ___
 
@@ -911,17 +913,17 @@ History of a specific asset.
 
 #### Defined in
 
-[BlockFrostAPI.ts:305](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L305)
+[src/BlockFrostAPI.ts:337](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L337)
 
 ___
 
 ### assetsHistoryAll
 
-• **assetsHistoryAll**: (`asset`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"asset_history"``]\>
+• **assetsHistoryAll**: (`asset`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"asset_history"``]\>
 
 #### Type declaration
 
-▸ (`asset`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"asset_history"``]\>
+▸ (`asset`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"asset_history"``]\>
 
 assetsHistoryAll - Whole history of a specific asset.
 
@@ -930,8 +932,7 @@ assetsHistoryAll - Whole history of a specific asset.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `asset` | `string` | Concatenation of the policy_id and hex-encoded asset_name |
-| `order` | ``"asc"`` \| ``"desc"`` | - |
-| `batchSize` | `number` | - |
+| `allMethodOptions?` | `AllMethodOptions` | - |
 
 ##### Returns
 
@@ -941,17 +942,17 @@ History of a specific asset.
 
 #### Defined in
 
-[BlockFrostAPI.ts:314](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L314)
+[src/BlockFrostAPI.ts:346](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L346)
 
 ___
 
 ### assetsPolicyById
 
-• **assetsPolicyById**: (`policy`: `string`, `pagination?`: `PaginationOptions`) => `Promise`<`components`[``"schemas"``][``"asset_addresses"``]\>
+• **assetsPolicyById**: (`policy`: `string`, `pagination?`: `PaginationOptions`) => `Promise`<`components`[``"schemas"``][``"asset_policy"``]\>
 
 #### Type declaration
 
-▸ (`policy`, `pagination?`): `Promise`<`components`[``"schemas"``][``"asset_addresses"``]\>
+▸ (`policy`, `pagination?`): `Promise`<`components`[``"schemas"``][``"asset_policy"``]\>
 
 assetsPolicyById - List of asset minted under a specific policy.
 
@@ -964,23 +965,23 @@ assetsPolicyById - List of asset minted under a specific policy.
 
 ##### Returns
 
-`Promise`<`components`[``"schemas"``][``"asset_addresses"``]\>
+`Promise`<`components`[``"schemas"``][``"asset_policy"``]\>
 
 List of asset minted under a specific policy.
 
 #### Defined in
 
-[BlockFrostAPI.ts:350](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L350)
+[src/BlockFrostAPI.ts:373](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L373)
 
 ___
 
 ### assetsPolicyByIdAll
 
-• **assetsPolicyByIdAll**: (`policy`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"asset_addresses"``]\>
+• **assetsPolicyByIdAll**: (`policy`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"asset_policy"``]\>
 
 #### Type declaration
 
-▸ (`policy`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"asset_addresses"``]\>
+▸ (`policy`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"asset_policy"``]\>
 
 assetsPolicyByIdAll - List of all assets minted under a specific policy.
 
@@ -989,18 +990,17 @@ assetsPolicyByIdAll - List of all assets minted under a specific policy.
 | Name | Type |
 | :------ | :------ |
 | `policy` | `string` |
-| `order` | ``"asc"`` \| ``"desc"`` |
-| `batchSize` | `number` |
+| `allMethodOptions?` | `AllMethodOptions` |
 
 ##### Returns
 
-`Promise`<`components`[``"schemas"``][``"asset_addresses"``]\>
+`Promise`<`components`[``"schemas"``][``"asset_policy"``]\>
 
 List of asset minted under a specific policy.
 
 #### Defined in
 
-[BlockFrostAPI.ts:359](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L359)
+[src/BlockFrostAPI.ts:382](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L382)
 
 ___
 
@@ -1029,36 +1029,7 @@ List of a specific asset transactions.
 
 #### Defined in
 
-[BlockFrostAPI.ts:332](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L332)
-
-___
-
-### assetsTxs
-
-• **assetsTxs**: (`asset`: `string`, `pagination?`: `PaginationOptions`) => `Promise`<`components`[``"schemas"``][``"asset_txs"``]\>
-
-#### Type declaration
-
-▸ (`asset`, `pagination?`): `Promise`<`components`[``"schemas"``][``"asset_txs"``]\>
-
-assetsTxs - List of a specific asset transactions.
-
-##### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `asset` | `string` | Concatenation of the policy_id and hex-encoded asset_name |
-| `pagination?` | `PaginationOptions` | - |
-
-##### Returns
-
-`Promise`<`components`[``"schemas"``][``"asset_txs"``]\>
-
-List of a specific asset transactions.
-
-#### Defined in
-
-[BlockFrostAPI.ts:323](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L323)
+[src/BlockFrostAPI.ts:355](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L355)
 
 ___
 
@@ -1068,7 +1039,7 @@ ___
 
 #### Defined in
 
-[BlockFrostAPI.ts:124](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L124)
+[src/BlockFrostAPI.ts:138](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L138)
 
 ___
 
@@ -1096,7 +1067,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:440](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L440)
+[src/BlockFrostAPI.ts:445](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L445)
 
 ___
 
@@ -1118,7 +1089,55 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:448](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L448)
+[src/BlockFrostAPI.ts:453](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L453)
+
+___
+
+### blocksLatestTxs
+
+• **blocksLatestTxs**: (`pagination?`: `PaginationOptions`) => `Promise`<`components`[``"schemas"``][``"block_content_txs"``]\>
+
+#### Type declaration
+
+▸ (`pagination?`): `Promise`<`components`[``"schemas"``][``"block_content_txs"``]\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pagination?` | `PaginationOptions` |
+
+##### Returns
+
+`Promise`<`components`[``"schemas"``][``"block_content_txs"``]\>
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:454](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L454)
+
+___
+
+### blocksLatestTxsAll
+
+• **blocksLatestTxsAll**: (`allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"block_content_txs"``]\>
+
+#### Type declaration
+
+▸ (`allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"block_content_txs"``]\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `allMethodOptions?` | `AllMethodOptions` |
+
+##### Returns
+
+`Promise`<`components`[``"schemas"``][``"block_content_txs"``]\>
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:455](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L455)
 
 ___
 
@@ -1147,7 +1166,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:457](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L457)
+[src/BlockFrostAPI.ts:464](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L464)
 
 ___
 
@@ -1176,7 +1195,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:466](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L466)
+[src/BlockFrostAPI.ts:473](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L473)
 
 ___
 
@@ -1205,17 +1224,17 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:475](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L475)
+[src/BlockFrostAPI.ts:482](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L482)
 
 ___
 
 ### blocksTxsAll
 
-• **blocksTxsAll**: (`hashOrNumber`: `string` \| `number`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"block_content_txs"``]\>
+• **blocksTxsAll**: (`hashOrNumber`: `string` \| `number`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"block_content_txs"``]\>
 
 #### Type declaration
 
-▸ (`hashOrNumber`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"block_content_txs"``]\>
+▸ (`hashOrNumber`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"block_content_txs"``]\>
 
 blocksTxsAll
 
@@ -1224,8 +1243,7 @@ blocksTxsAll
 | Name | Type |
 | :------ | :------ |
 | `hashOrNumber` | `string` \| `number` |
-| `order` | ``"asc"`` \| ``"desc"`` |
-| `batchSize` | `number` |
+| `allMethodOptions?` | `AllMethodOptions` |
 
 ##### Returns
 
@@ -1235,7 +1253,42 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:484](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L484)
+[src/BlockFrostAPI.ts:491](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L491)
+
+___
+
+### deriveAddress
+
+• **deriveAddress**: (`publicKey`: `string`, `addressIndex`: `number`, `type`: ``0`` \| ``1``) => { `address`: `string` ; `path`: `string`  }
+
+#### Type declaration
+
+▸ (`publicKey`, `addressIndex`, `type`): `Object`
+
+deriveAddress
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `publicKey` | `string` |
+| `addressIndex` | `number` |
+| `type` | ``0`` \| ``1`` |
+
+##### Returns
+
+`Object`
+
+xxx
+
+| Name | Type |
+| :------ | :------ |
+| `address` | `string` |
+| `path` | `string` |
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:938](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L938)
 
 ___
 
@@ -1263,7 +1316,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:493](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L493)
+[src/BlockFrostAPI.ts:500](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L500)
 
 ___
 
@@ -1292,7 +1345,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:502](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L502)
+[src/BlockFrostAPI.ts:509](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L509)
 
 ___
 
@@ -1322,7 +1375,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:511](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L511)
+[src/BlockFrostAPI.ts:518](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L518)
 
 ___
 
@@ -1344,7 +1397,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:519](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L519)
+[src/BlockFrostAPI.ts:526](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L526)
 
 ___
 
@@ -1373,7 +1426,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:528](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L528)
+[src/BlockFrostAPI.ts:535](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L535)
 
 ___
 
@@ -1401,7 +1454,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:537](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L537)
+[src/BlockFrostAPI.ts:544](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L544)
 
 ___
 
@@ -1430,7 +1483,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:546](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L546)
+[src/BlockFrostAPI.ts:553](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L553)
 
 ___
 
@@ -1459,7 +1512,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:555](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L555)
+[src/BlockFrostAPI.ts:562](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L562)
 
 ___
 
@@ -1489,7 +1542,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:564](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L564)
+[src/BlockFrostAPI.ts:571](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L571)
 
 ___
 
@@ -1511,7 +1564,36 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:588](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L588)
+[src/BlockFrostAPI.ts:595](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L595)
+
+___
+
+### getAccount
+
+• **getAccount**: (`publicKey`: `string`, `type`: `Account.Type`) => `Promise`<`Account.Result`[]\>
+
+#### Type declaration
+
+▸ (`publicKey`, `type`): `Promise`<`Account.Result`[]\>
+
+txSubmit
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `publicKey` | `string` |
+| `type` | `Account.Type` |
+
+##### Returns
+
+`Promise`<`Account.Result`[]\>
+
+xxx
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:947](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L947)
 
 ___
 
@@ -1533,7 +1615,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:572](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L572)
+[src/BlockFrostAPI.ts:579](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L579)
 
 ___
 
@@ -1555,17 +1637,17 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:580](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L580)
+[src/BlockFrostAPI.ts:587](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L587)
 
 ___
 
 ### metadataTxsLabel
 
-• **metadataTxsLabel**: (`label`: `string`, `pagination?`: `PaginationOptions`) => `Promise`<`components`[``"schemas"``][``"tx_metadata_labels"``]\>
+• **metadataTxsLabel**: (`label`: `string`, `pagination?`: `PaginationOptions`) => `Promise`<`components`[``"schemas"``][``"tx_metadata_label_json"``]\>
 
 #### Type declaration
 
-▸ (`label`, `pagination?`): `Promise`<`components`[``"schemas"``][``"tx_metadata_labels"``]\>
+▸ (`label`, `pagination?`): `Promise`<`components`[``"schemas"``][``"tx_metadata_label_json"``]\>
 
 metadataTxsLabel
 
@@ -1578,13 +1660,13 @@ metadataTxsLabel
 
 ##### Returns
 
-`Promise`<`components`[``"schemas"``][``"tx_metadata_labels"``]\>
+`Promise`<`components`[``"schemas"``][``"tx_metadata_label_json"``]\>
 
 xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:597](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L597)
+[src/BlockFrostAPI.ts:604](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L604)
 
 ___
 
@@ -1613,17 +1695,17 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:606](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L606)
+[src/BlockFrostAPI.ts:613](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L613)
 
 ___
 
 ### metadataTxsLabels
 
-• **metadataTxsLabels**: (`pagination?`: `PaginationOptions`) => `Promise`<`components`[``"schemas"``][``"tx_metadata_label_json"``]\>
+• **metadataTxsLabels**: (`pagination?`: `PaginationOptions`) => `Promise`<`components`[``"schemas"``][``"tx_metadata_labels"``]\>
 
 #### Type declaration
 
-▸ (`pagination?`): `Promise`<`components`[``"schemas"``][``"tx_metadata_label_json"``]\>
+▸ (`pagination?`): `Promise`<`components`[``"schemas"``][``"tx_metadata_labels"``]\>
 
 metadataTxsLabels
 
@@ -1635,13 +1717,13 @@ metadataTxsLabels
 
 ##### Returns
 
-`Promise`<`components`[``"schemas"``][``"tx_metadata_label_json"``]\>
+`Promise`<`components`[``"schemas"``][``"tx_metadata_labels"``]\>
 
 xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:614](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L614)
+[src/BlockFrostAPI.ts:621](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L621)
 
 ___
 
@@ -1663,7 +1745,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:622](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L622)
+[src/BlockFrostAPI.ts:629](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L629)
 
 ___
 
@@ -1685,7 +1767,29 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:630](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L630)
+[src/BlockFrostAPI.ts:637](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L637)
+
+___
+
+### network
+
+• **network**: () => `Promise`<`components`[``"schemas"``][``"network"``]\>
+
+#### Type declaration
+
+▸ (): `Promise`<`components`[``"schemas"``][``"network"``]\>
+
+network
+
+##### Returns
+
+`Promise`<`components`[``"schemas"``][``"network"``]\>
+
+Detailed network information.
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:955](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L955)
 
 ___
 
@@ -1713,7 +1817,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:638](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L638)
+[src/BlockFrostAPI.ts:645](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L645)
 
 ___
 
@@ -1743,17 +1847,17 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:646](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L646)
+[src/BlockFrostAPI.ts:653](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L653)
 
 ___
 
 ### nutlinkAddressTickerAll
 
-• **nutlinkAddressTickerAll**: (`address`: `string`, `ticker`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"nutlink_address_ticker"``]\>
+• **nutlinkAddressTickerAll**: (`address`: `string`, `ticker`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"nutlink_address_ticker"``]\>
 
 #### Type declaration
 
-▸ (`address`, `ticker`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"nutlink_address_ticker"``]\>
+▸ (`address`, `ticker`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"nutlink_address_ticker"``]\>
 
 nutlinkAddressTickerAll
 
@@ -1763,8 +1867,7 @@ nutlinkAddressTickerAll
 | :------ | :------ |
 | `address` | `string` |
 | `ticker` | `string` |
-| `order` | ``"asc"`` \| ``"desc"`` |
-| `batchSize` | `number` |
+| `allMethodOptions?` | `AllMethodOptions` |
 
 ##### Returns
 
@@ -1774,7 +1877,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:670](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L670)
+[src/BlockFrostAPI.ts:677](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L677)
 
 ___
 
@@ -1803,17 +1906,17 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:654](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L654)
+[src/BlockFrostAPI.ts:661](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L661)
 
 ___
 
 ### nutlinkAddressTickersAll
 
-• **nutlinkAddressTickersAll**: (`address`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"nutlink_address_tickers"``]\>
+• **nutlinkAddressTickersAll**: (`address`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"nutlink_address_tickers"``]\>
 
 #### Type declaration
 
-▸ (`address`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"nutlink_address_tickers"``]\>
+▸ (`address`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"nutlink_address_tickers"``]\>
 
 nutlinkAddressTickersAll
 
@@ -1822,8 +1925,7 @@ nutlinkAddressTickersAll
 | Name | Type |
 | :------ | :------ |
 | `address` | `string` |
-| `order` | ``"asc"`` \| ``"desc"`` |
-| `batchSize` | `number` |
+| `allMethodOptions?` | `AllMethodOptions` |
 
 ##### Returns
 
@@ -1833,7 +1935,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:662](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L662)
+[src/BlockFrostAPI.ts:669](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L669)
 
 ___
 
@@ -1862,17 +1964,17 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:678](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L678)
+[src/BlockFrostAPI.ts:685](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L685)
 
 ___
 
 ### nutlinkTickersAll
 
-• **nutlinkTickersAll**: (`ticker`: `string`, `order`: ``"asc"`` \| ``"desc"``, `batchSize`: `number`) => `Promise`<`components`[``"schemas"``][``"nutlink_tickers_ticker"``]\>
+• **nutlinkTickersAll**: (`ticker`: `string`, `allMethodOptions?`: `AllMethodOptions`) => `Promise`<`components`[``"schemas"``][``"nutlink_tickers_ticker"``]\>
 
 #### Type declaration
 
-▸ (`ticker`, `order`, `batchSize?`): `Promise`<`components`[``"schemas"``][``"nutlink_tickers_ticker"``]\>
+▸ (`ticker`, `allMethodOptions?`): `Promise`<`components`[``"schemas"``][``"nutlink_tickers_ticker"``]\>
 
 nutlinkTickersAll
 
@@ -1881,8 +1983,7 @@ nutlinkTickersAll
 | Name | Type |
 | :------ | :------ |
 | `ticker` | `string` |
-| `order` | ``"asc"`` \| ``"desc"`` |
-| `batchSize` | `number` |
+| `allMethodOptions?` | `AllMethodOptions` |
 
 ##### Returns
 
@@ -1892,7 +1993,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:686](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L686)
+[src/BlockFrostAPI.ts:693](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L693)
 
 ___
 
@@ -1902,7 +2003,7 @@ ___
 
 #### Defined in
 
-[BlockFrostAPI.ts:123](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L123)
+[src/BlockFrostAPI.ts:137](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L137)
 
 ___
 
@@ -1930,7 +2031,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:703](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L703)
+[src/BlockFrostAPI.ts:710](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L710)
 
 ___
 
@@ -1958,7 +2059,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:694](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L694)
+[src/BlockFrostAPI.ts:701](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L701)
 
 ___
 
@@ -1986,7 +2087,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:712](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L712)
+[src/BlockFrostAPI.ts:719](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L719)
 
 ___
 
@@ -2015,7 +2116,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:721](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L721)
+[src/BlockFrostAPI.ts:728](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L728)
 
 ___
 
@@ -2044,7 +2145,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:730](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L730)
+[src/BlockFrostAPI.ts:737](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L737)
 
 ___
 
@@ -2073,7 +2174,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:739](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L739)
+[src/BlockFrostAPI.ts:746](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L746)
 
 ___
 
@@ -2101,7 +2202,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:748](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L748)
+[src/BlockFrostAPI.ts:755](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L755)
 
 ___
 
@@ -2130,7 +2231,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:757](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L757)
+[src/BlockFrostAPI.ts:764](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L764)
 
 ___
 
@@ -2158,7 +2259,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:765](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L765)
+[src/BlockFrostAPI.ts:772](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L772)
 
 ___
 
@@ -2186,7 +2287,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:773](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L773)
+[src/BlockFrostAPI.ts:780](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L780)
 
 ___
 
@@ -2196,7 +2297,7 @@ ___
 
 #### Defined in
 
-[BlockFrostAPI.ts:121](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L121)
+[src/BlockFrostAPI.ts:135](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L135)
 
 ___
 
@@ -2218,7 +2319,163 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:781](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L781)
+[src/BlockFrostAPI.ts:788](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L788)
+
+___
+
+### script
+
+• **script**: (`scriptHash`: `string`) => `Promise`<`components`[``"schemas"``][``"script"``]\>
+
+#### Type declaration
+
+▸ (`scriptHash`): `Promise`<`components`[``"schemas"``][``"script"``]\>
+
+Information about a specific script
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `scriptHash` | `string` |
+
+##### Returns
+
+`Promise`<`components`[``"schemas"``][``"script"``]\>
+
+Information about a specific script
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:804](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L804)
+
+___
+
+### scriptCbor
+
+• **scriptCbor**: (`scriptHash`: `string`) => `Promise`<`components`[``"schemas"``][``"script_cbor"``]\>
+
+#### Type declaration
+
+▸ (`scriptHash`): `Promise`<`components`[``"schemas"``][``"script_cbor"``]\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `scriptHash` | `string` |
+
+##### Returns
+
+`Promise`<`components`[``"schemas"``][``"script_cbor"``]\>
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:814](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L814)
+
+___
+
+### scriptDatum
+
+• **scriptDatum**: (`datumHash`: `string`) => `Promise`<`components`[``"schemas"``][``"script_datum"``]\>
+
+#### Type declaration
+
+▸ (`datumHash`): `Promise`<`components`[``"schemas"``][``"script_datum"``]\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `datumHash` | `string` |
+
+##### Returns
+
+`Promise`<`components`[``"schemas"``][``"script_datum"``]\>
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:819](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L819)
+
+___
+
+### scriptJson
+
+• **scriptJson**: (`scriptHash`: `string`) => `Promise`<`components`[``"schemas"``][``"script_json"``]\>
+
+#### Type declaration
+
+▸ (`scriptHash`): `Promise`<`components`[``"schemas"``][``"script_json"``]\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `scriptHash` | `string` |
+
+##### Returns
+
+`Promise`<`components`[``"schemas"``][``"script_json"``]\>
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:809](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L809)
+
+___
+
+### scriptRedeemers
+
+• **scriptRedeemers**: (`scriptHash`: `string`) => `Promise`<`components`[``"schemas"``][``"script_redeemers"``]\>
+
+#### Type declaration
+
+▸ (`scriptHash`): `Promise`<`components`[``"schemas"``][``"script_redeemers"``]\>
+
+List of redeemers of a specific script
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `scriptHash` | `string` |
+
+##### Returns
+
+`Promise`<`components`[``"schemas"``][``"script_redeemers"``]\>
+
+List the information about redeemers of a specific script
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:827](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L827)
+
+___
+
+### scripts
+
+• **scripts**: (`pagination?`: `PaginationOptions`) => `Promise`<`components`[``"schemas"``][``"scripts"``]\>
+
+#### Type declaration
+
+▸ (`pagination?`): `Promise`<`components`[``"schemas"``][``"scripts"``]\>
+
+List scripts
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pagination?` | `PaginationOptions` |
+
+##### Returns
+
+`Promise`<`components`[``"schemas"``][``"scripts"``]\>
+
+List of script hashes
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:796](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L796)
 
 ___
 
@@ -2246,7 +2503,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:880](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L880)
+[src/BlockFrostAPI.ts:929](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L929)
 
 ___
 
@@ -2274,7 +2531,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:790](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L790)
+[src/BlockFrostAPI.ts:836](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L836)
 
 ___
 
@@ -2302,7 +2559,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:808](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L808)
+[src/BlockFrostAPI.ts:854](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L854)
 
 ___
 
@@ -2330,7 +2587,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:871](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L871)
+[src/BlockFrostAPI.ts:917](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L917)
 
 ___
 
@@ -2358,7 +2615,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:799](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L799)
+[src/BlockFrostAPI.ts:845](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L845)
 
 ___
 
@@ -2386,7 +2643,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:862](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L862)
+[src/BlockFrostAPI.ts:908](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L908)
 
 ___
 
@@ -2414,7 +2671,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:817](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L817)
+[src/BlockFrostAPI.ts:863](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L863)
 
 ___
 
@@ -2442,7 +2699,31 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:826](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L826)
+[src/BlockFrostAPI.ts:872](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L872)
+
+___
+
+### txsRedeemers
+
+• **txsRedeemers**: (`hash`: `string`) => `Promise`<`components`[``"schemas"``][``"tx_content_redeemers"``]\>
+
+#### Type declaration
+
+▸ (`hash`): `Promise`<`components`[``"schemas"``][``"tx_content_redeemers"``]\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `hash` | `string` |
+
+##### Returns
+
+`Promise`<`components`[``"schemas"``][``"tx_content_redeemers"``]\>
+
+#### Defined in
+
+[src/BlockFrostAPI.ts:920](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L920)
 
 ___
 
@@ -2470,7 +2751,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:835](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L835)
+[src/BlockFrostAPI.ts:881](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L881)
 
 ___
 
@@ -2498,7 +2779,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:844](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L844)
+[src/BlockFrostAPI.ts:890](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L890)
 
 ___
 
@@ -2526,7 +2807,7 @@ xxx
 
 #### Defined in
 
-[BlockFrostAPI.ts:853](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L853)
+[src/BlockFrostAPI.ts:899](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L899)
 
 ___
 
@@ -2536,4 +2817,4 @@ ___
 
 #### Defined in
 
-[BlockFrostAPI.ts:122](https://github.com/blockfrost/blockfrost-js/blob/ced2dac/src/BlockFrostAPI.ts#L122)
+[src/BlockFrostAPI.ts:136](https://github.com/blockfrost/blockfrost-js/blob/9b3f200/src/BlockFrostAPI.ts#L136)
